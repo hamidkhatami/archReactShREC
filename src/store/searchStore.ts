@@ -21,7 +21,7 @@ interface SearchState {
   setSearchTerm: (term: string) => void;
   setSearchType: (type: UserType) => void;
   setDepartment: (dept: string) => void;
-  setStartDate: (date: Value) => void;
+  setStartDate: (string: Value) => void;
   submitAll: () => void; // اکشن نهایی سابمیت
 }
 

@@ -29,7 +29,7 @@ const JalaliDatePicker: React.FC<JalaliDatePickerProps> = ({
     setSelectedDate(date);
     
     if (onChange) {
-      const gregorianDate = date ? date.convert() : null;
+      const gregorianDate = date ? date.convert(persian, persian_fa) : null;
       onChange(gregorianDate ? gregorianDate.toDate() : null);
     }
   };

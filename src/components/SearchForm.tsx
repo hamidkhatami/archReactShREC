@@ -18,6 +18,14 @@ import { useSearchStore } from '../store/searchStore';
 import JalaliDatePicker from './JalaliDatePicker'; // کامپوننت شمسی
 
 const departmentOptions = ['IT', 'HR', 'Finance', 'Marketing'];
+interface JalaliDatePickerProps {
+  label?: string;
+  value?: Date | string;
+  onChange?: (date: Date | null) => void;
+  disabled?: boolean;
+  className?: string;
+}
+
 
 const SearchForm: React.FC = () => {
   const { 
@@ -36,6 +44,13 @@ const SearchForm: React.FC = () => {
     e.preventDefault();
     submitAll(); // اجرای اکشن ترکیبی Zustand
   };
+
+
+  const handleDate=(e:JalaliDatePickerProps)=>{
+    //setStartDate(e.value?.toString());
+    alert(e.value?.toString)
+    
+  }
 
   // چک کردن اینکه فرم کاملاً خالی نباشد تا دکمه فعال شود
   const isFormEmpty = !searchTerm && searchType === 'All' && !department && !startDate;
