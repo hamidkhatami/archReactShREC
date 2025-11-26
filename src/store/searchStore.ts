@@ -44,6 +44,7 @@ export const useSearchStore = create<SearchState>((set, get) => ({
   // اکشن سابمیت: وضعیت لحظه‌ای فرم را به وضعیت نهایی کوئری منتقل می‌کند
   submitAll: () => {
     const currentState = get();
+    alert( currentState.startDate)
     set({
       submitTerm: currentState.searchTerm,
       submitFilters: {

@@ -45,11 +45,10 @@ const SearchForm: React.FC = () => {
       component="form" 
       onSubmit={handleSubmit} 
       dir="rtl" 
-      sx={{ p: 3, border: '1px solid #ddd', borderRadius: 2 }}
+      // sx={{ p: 3, border: '1px solid #ddd', borderRadius: 2 }}
     >
-      <Grid container spacing={3}>
+      <Grid container spacing={2}>
         
-        {/* ۱. جستجوی متنی و دکمه (در یک ردیف) */}
         <Grid item xs={12} sm={8}>
           <TextField
             label="جستجوی متنی (نام یا نام کاربری)"
@@ -127,7 +126,7 @@ const SearchForm: React.FC = () => {
         </Grid>
         
       </Grid>
-    </Box>
+    </Box> 
   );
 };
 
