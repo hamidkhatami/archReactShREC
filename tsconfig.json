@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOMIterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* تنظیمات Bundler */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    
+    /* Linting و بررسی خطاها */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    // --- تنظیمات Path Aliases ---
+    "baseUrl": ".", // پایه آدرس‌دهی را ریشه پروژه قرار می‌دهد
+    "paths": {
+      // این خط به TypeScript می‌گوید که @/* در واقع src/* است
+      "@/*": ["src/*"] 
+    },
+  },
+  "include": ["src", "vite.config.ts"], 
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
