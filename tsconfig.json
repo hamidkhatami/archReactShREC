@@ -23,7 +23,13 @@
     "baseUrl": ".", // پایه آدرس‌دهی را ریشه پروژه قرار می‌دهد
     "paths": {
       // این خط به TypeScript می‌گوید که @/* در واقع src/* است
-      "@/*": ["src/*"] 
+      "@/*": ["src/*"],
+      "@/components": ["src/components/*"],
+      "@/hooks": ["src/hooks/*"],
+      "@/store": ["src/store/*"],
+      "@types": ["src/types/*"],
+      "@api": ["src/api/*"],
+
     },
   },
   "include": ["src", "vite.config.ts"], 
