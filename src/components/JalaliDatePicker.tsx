@@ -5,9 +5,10 @@ import persian from 'react-date-object/calendars/persian';
 import persian_fa from 'react-date-object/locales/persian_fa';
 import { TextField } from '@mui/material';
 import { CalendarToday } from '@mui/icons-material';
+import { persianTitle } from '@/consts/persianTitle';
+
 
 interface JalaliDatePickerProps {
-  label?: string;
   value?: Date | string;
   onChange?: (date: Date | null) => void;
   disabled?: boolean;
@@ -15,7 +16,7 @@ interface JalaliDatePickerProps {
 }
 
 const JalaliDatePicker: React.FC<JalaliDatePickerProps> = ({
-  label = 'تاریخ',
+  
   value,
   onChange,
   disabled = false,
@@ -46,7 +47,7 @@ const JalaliDatePicker: React.FC<JalaliDatePickerProps> = ({
         render={(value, openCalendar) => (
           <TextField
             fullWidth
-            label={label}
+            label={persianTitle.startDate}
             value={value || ''}
             onClick={openCalendar}
             InputProps={{

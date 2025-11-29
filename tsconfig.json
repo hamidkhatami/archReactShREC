@@ -27,8 +27,9 @@
       "@/components": ["src/components/*"],
       "@/hooks": ["src/hooks/*"],
       "@/store": ["src/store/*"],
-      "@types": ["src/types/*"],
-      "@api": ["src/api/*"],
+      "@/types": ["src/types/*"],
+      "@/api": ["src/api/*"],
+      "@/locales": ["src/i18n/locales/*"],
 
     },
   },
