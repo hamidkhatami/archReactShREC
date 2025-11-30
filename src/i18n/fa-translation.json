@@ -1,0 +1,22 @@
+{
+  "labels": {
+    "department": "دپارتمان",
+    "users": "کاربران",
+    "dashboard": "داشبورد",
+    "reports": "گزارشات",
+    "startDate": "تاریخ شروع",    
+    "calcType":"روش محاسبات",
+    "transactionType":"نوع تراکنش",
+    "calcRate":"نرخ محاسبه",
+    "amountCalc":"مبلغ مورد محاسبه"
+  },
+  "buttons": {
+    "submit": "ثبت",
+    "cancel": "لغو"
+  },
+  "errors":{
+      "invalidDate" :"تاریخ نامعتبر است!",
+      "empty":"تاریخ وارد نشده است!"
+
+  }
+}

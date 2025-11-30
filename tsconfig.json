@@ -12,6 +12,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
+        "esModuleInterop": true,
     "jsx": "react-jsx",
     
     /* Linting و بررسی خطاها */
@@ -29,8 +30,7 @@
       "@/store": ["src/store/*"],
       "@/types": ["src/types/*"],
       "@/api": ["src/api/*"],
-      "@/locales": ["src/i18n/locales/*"],
-
+      "@/i18n": ["src/i18n/*"]
     },
   },
   "include": ["src", "vite.config.ts"], 

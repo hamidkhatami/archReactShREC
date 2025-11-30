@@ -1,0 +1,50 @@
+.date-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 240px;
+}
+
+.rtl-label {
+  text-align: right;
+  font-size: 14px;
+}
+
+.date-input-box {
+  position: relative;
+}
+
+.rtl-input {
+  width: 100%;
+  padding: 10px 12px 10px 36px; /* فضای سمت چپ برای آیکن */
+  direction: rtl;
+  text-align: right;
+  font-size: 15px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+
+.calendar-icon {
+  position: absolute;
+  left: 10px; /* آیکن سمت چپ */
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.calendar-icon-container {
+  position: absolute;
+  left: 0;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+}
+
+/* popup تقویم سمت چپ */
+.popup-calendar-left {
+  direction: rtl !important;
+  transform: translateX(-100%);
+}

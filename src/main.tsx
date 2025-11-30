@@ -5,6 +5,7 @@ import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
 import rtlPlugin from "stylis-plugin-rtl";
 import { QueryClient,QueryClientProvider } from "@tanstack/react-query";
+import "@/i18n/index";  // مهم! این فایل باید قبل از render لود شود
 
 
 const cacheRtl = createCache({

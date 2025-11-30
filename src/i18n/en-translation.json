@@ -13,5 +13,10 @@
   "buttons": {
     "submit": "ثبت",
     "cancel": "لغو"
+  },
+    "errors":{
+      "invalidDate" :"iNVALID DATE !",
+      "empty":"ِDate is Empty!"
+
   }
 }

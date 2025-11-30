@@ -14,20 +14,11 @@ import {
 } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search'
 import { useSearchStore } from '@/store/searchStore'
-import JalaliDatePicker from '@/components/JalaliDatePicker' // کامپوننت شمسی
+import JalaliDatePicker from '@/components/JalaliDatePicker1111' // کامپوننت شمسی
 import { departmentOptions } from '@/consts/constants'
-import {fa} from '@/locales/fa'
-
-
-
-interface JalaliDatePickerProps {
-  label?: string;
-  value?: Date | string;
-  onChange?: (date: Date | null) => void;
-  disabled?: boolean;
-  className?: string;
-}
-
+import { useTranslation } from 'react-i18next'
+import {JalaliDatePickerProps} from '@/types/inteface'
+import PersianDateInput from './PersianDateInput'
 
 const SearchForm: React.FC = () => {
   const {
@@ -53,6 +44,10 @@ const SearchForm: React.FC = () => {
     alert(e.value?.toString)
 
   }
+
+   const [date, setDate] = React.useState<DateObject | null>(null);
+
+  const { t , i18n } = useTranslation();
 
   // چک کردن اینکه فرم کاملاً خالی نباشد تا دکمه فعال شود
   const isFormEmpty = !searchTerm && searchType === 'All' && !department && !startDate;
@@ -199,16 +194,20 @@ const SearchForm: React.FC = () => {
         </Button>
       </Grid>
 
-      {/* ۲. فیلترهای جانبی */}
-
-      {/* ستون تاریخ شمسی */}
-      <Grid item xs={12} sm={4}>
+    
+       <Grid item xs={12} sm={4}>
         <JalaliDatePicker
-          label="تاریخ شروع کار از"
+          label={t('labels.startDate')}
           value={startDate}
           onChange={setStartDate}
         />
       </Grid>
+       {/* <PersianDateInput
+  value={date}
+  onChange={setDate}
+  label="تاریخ تولد"
+/>; */}
+
 
       {/* ستون کمبو باکس (Autocomplete) */}
       <Grid item xs={12} sm={4}>
