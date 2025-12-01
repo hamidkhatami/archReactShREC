@@ -236,18 +236,18 @@ const JalaliDatePicker: React.FC<JalaliDatePickerProps> = ({
     setSelectedDate(jDate);
     setInputValue(jDate.formatted);
     setError("");
-    onChange?.(jDate.dateObject?.toDate() || null);
+    // onChange?.(jDate.dateObject?.toDate() || null);
   };
 
-  const handleDateChange = (date: any) => {
-    if (!date) {
+  const handleDateChange = (val: any) => {
+    if (!val) {
       setSelectedDate(null);
       setInputValue("");
       onChange?.(null);
       return;
     }
 
-    const jDate = new JalaliDateObject(date.format("YYYY/MM/DD"));
+    const jDate = new JalaliDateObject(val);
     setSelectedDate(jDate);
     setInputValue(jDate.formatted);
     setError("");
