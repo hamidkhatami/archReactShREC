@@ -25,12 +25,15 @@
     "paths": {
       // این خط به TypeScript می‌گوید که @/* در واقع src/* است
       "@/*": ["src/*"],
-      "@/components": ["src/components/*"],
-      "@/hooks": ["src/hooks/*"],
-      "@/store": ["src/store/*"],
-      "@/types": ["src/types/*"],
-      "@/api": ["src/api/*"],
-      "@/i18n": ["src/i18n/*"]
+      "@/components/*": ["src/components/*"],
+      "@/hooks/*": ["src/hooks/*"],
+      "@/store/*": ["src/store/*"],
+      "@/types/*": ["src/types/*"],
+      "@/api/*": ["src/api/*"],
+      "@/i18n/*": ["src/i18n/*"],
+      "@/utilities": ["src/utilities/*"]
+      
+
     },
   },
   "include": ["src", "vite.config.ts"], 

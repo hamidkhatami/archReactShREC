@@ -14,7 +14,8 @@ import {
 } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search'
 import { useSearchStore } from '@/store/searchStore'
-import JalaliDatePicker from '@/components/JalaliDatePicker1111' // کامپوننت شمسی
+// import JalaliDatePicker from '@/components/JalaliDatePicker1111' // کامپوننت شمسی
+import JalaliDatePicker from '@/components/JalaliDatePicker' // کامپوننت شمسی
 import { departmentOptions } from '@/consts/constants'
 import { useTranslation } from 'react-i18next'
 import {JalaliDatePickerProps} from '@/types/inteface'
@@ -45,7 +46,7 @@ const SearchForm: React.FC = () => {
 
   }
 
-   const [date, setDate] = React.useState<DateObject | null>(null);
+  //  const [date, setDate] = React.useState<DateObject | null>(null);
 
   const { t , i18n } = useTranslation();
 
