@@ -3,9 +3,10 @@ export function isJalaliLeap(year: number): boolean {
 }
 
 export function validateJalaliDate(dateStr: string): boolean {
+    
       if (typeof dateStr !== "string") return false;
 
-  debugger
+   
     const jalaliDateRegex = /^(13|14)\d{2}\/(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])$/
   const match = dateStr.match(jalaliDateRegex);
 

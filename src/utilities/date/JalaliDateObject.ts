@@ -2,6 +2,7 @@ import DateObject, { Calendar, Locale } from "react-date-object";
 import persian from "react-date-object/calendars/persian";
 import persian_fa from "react-date-object/locales/persian_fa";
 import { validateJalaliDate } from "@/utilities/date/jalaliValidator";
+import { toEnglishDigits } from "@/utilities/date/utility";
 
 interface JalaliDateObjectOptions {
   format?: string;
@@ -18,16 +19,19 @@ export class JalaliDateObject {
   private _dateObject: DateObject | null;
 
   constructor(input: string, options: JalaliDateObjectOptions = {}) {
-    this.raw = input;
+    
+    this.raw =toEnglishDigits(input.trim());
     this.format = options.format || "YYYY/MM/DD";
     this.calendar = options.calendar || persian;
     this.locale = options.locale || persian_fa;
 
-    this.isValid = validateJalaliDate(input);
+    // اعتبارسنجی
+    this.isValid = typeof input === "string" && validateJalaliDate(toEnglishDigits(input.trim()));
 
+    // اگر معتبر باشد تبدیل می‌کنیم
     this._dateObject = this.isValid
       ? new DateObject({
-          date: input,
+          date: toEnglishDigits(input.trim()),
           format: this.format,
           calendar: this.calendar,
           locale: this.locale,
@@ -40,6 +44,7 @@ export class JalaliDateObject {
   }
 
   get formatted(): string {
+    
     return this.isValid && this._dateObject
       ? this._dateObject.format(this.format)
       : this.raw;

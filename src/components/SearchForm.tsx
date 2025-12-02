@@ -20,6 +20,7 @@ import { departmentOptions } from '@/consts/constants'
 import { useTranslation } from 'react-i18next'
 import {JalaliDatePickerProps} from '@/types/inteface'
 import PersianDateInput from './PersianDateInput'
+import { toEnglishDigits } from '@/utilities/date/utility'
 
 const SearchForm: React.FC = () => {
   const {
@@ -35,16 +36,36 @@ const SearchForm: React.FC = () => {
   } = useSearchStore();
 
   const handleSubmit = (e: React.FormEvent) => {
+    alert("1121221")
+    alert(startDate)
     e.preventDefault();
     submitAll(); // اجرای اکشن ترکیبی Zustand
   };
 
 
-  const handleDate = (e: JalaliDatePickerProps) => {
-    //setStartDate(e.value?.toString());
-    alert(e.value?.toString)
-
+ const changeDate = (e: Date| null) => {
+  debugger
+  if (!e) {
+    setStartDate(null);
+    return;
   }
+
+  // اگر value نوعش string بود تبدیل کن
+  if (typeof e === "string") {
+    const cleaned = toEnglishDigits(e);
+    setStartDate(cleaned);
+    
+    return;
+  }
+
+  // اگر Date بود (ISO)
+  if (e instanceof Date) {
+    setStartDate(e.toISOString().split("T")[0]);
+    
+    return;
+  }
+};
+
 
   //  const [date, setDate] = React.useState<DateObject | null>(null);
 
@@ -200,7 +221,7 @@ const SearchForm: React.FC = () => {
         <JalaliDatePicker
           label={t('labels.startDate')}
           value={startDate}
-          onChange={setStartDate}
+          onChange={changeDate}
         />
       </Grid>
        {/* <PersianDateInput

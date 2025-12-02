@@ -10,7 +10,7 @@ import { JalaliDatePickerProps } from "@/types/inteface";
 
 
 
-const JalaliDatePicker: React.FC<JalaliDatePickerProps> = ({
+const JalaliDatePicker11: React.FC<JalaliDatePickerProps> = ({
   label,
   value,
   onChange,
@@ -154,6 +154,7 @@ const JalaliDatePicker: React.FC<JalaliDatePickerProps> = ({
         value={inputValue}  // ← state جدا برای input
         onClick={openCalendar}
         onChange={(e) => {
+          debugger
           const val = e.target.value;
           setInputValue(val); // فقط input را کنترل کن
 
