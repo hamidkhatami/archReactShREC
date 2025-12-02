@@ -21,6 +21,7 @@ import { useTranslation } from 'react-i18next'
 import {JalaliDatePickerProps} from '@/types/inteface'
 import PersianDateInput from './PersianDateInput'
 import { toEnglishDigits } from '@/utilities/date/utility'
+import { JalaliDateObject } from '@/utilities/date/JalaliDateObject'
 
 const SearchForm: React.FC = () => {
   const {
@@ -43,7 +44,7 @@ const SearchForm: React.FC = () => {
   };
 
 
- const changeDate = (e: Date| null) => {
+ const changeDate = (e: JalaliDateObject| null) => {
   debugger
   if (!e) {
     setStartDate(null);
@@ -61,7 +62,6 @@ const SearchForm: React.FC = () => {
   // اگر Date بود (ISO)
   if (e instanceof Date) {
     setStartDate(e.toISOString().split("T")[0]);
-    
     return;
   }
 };

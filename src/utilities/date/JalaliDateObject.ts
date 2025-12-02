@@ -49,4 +49,21 @@ export class JalaliDateObject {
       ? this._dateObject.format(this.format)
       : this.raw;
   }
+
+  get getGoratgian(): string {
+    
+    return this.isValid && this._dateObject
+      ? this._dateObject.format(this.format)
+      : this.raw;
+  }
+
+   /** تاریخ میلادی واقعی برای API → خروجی Date */
+  get gregorian(): Date | null {
+    return this._dateObject ? this._dateObject.toDate() : null;
+  }
+
+  /** متد کمکی */
+  toGregorianDate(): Date | null {
+    return this.gregorian;
+  }
 }
