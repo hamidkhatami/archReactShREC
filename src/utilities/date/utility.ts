@@ -1,5 +1,6 @@
 export function toEnglishDigits(str: string): string {
-  return str.replace(/[۰-۹]/g, (d) => String("۰۱۲۳۴۵۶۷۸۹".indexOf(d)))
+  
+    return str?.replace(/[۰-۹]/g, (d) => String("۰۱۲۳۴۵۶۷۸۹".indexOf(d)))
 }
 
 export function isJalaliLeap(year: number): boolean {

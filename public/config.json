@@ -1,0 +1,9 @@
+{
+  "API_BASE_URL": "http://192.168.113.53",
+  "APP_NAME": "csr",
+  "ENV": "local",
+  "MAIN" : "api",
+  "PORT" :"8080",
+  "VERSION" : "v1"
+
+}

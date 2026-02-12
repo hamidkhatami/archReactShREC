@@ -1,40 +1,39 @@
 import DashboardIcon from "@mui/icons-material/Dashboard";
-import PeopleIcon from "@mui/icons-material/People";
-import BarChartIcon from "@mui/icons-material/BarChart";
 import PersonIcon from "@mui/icons-material/Person";
-import AddIcon from "@mui/icons-material/Add";
+import index from "@/pages/dashboard/index";
+import MakeReport from "@/pages/dashboard/MakeReport";
+import { t } from "i18next";
+import { MenuItemType } from "@/types/menuItems";
+import Login from "@/pages/Login";
+import FeeSetting from "@/pages/fee/FeeSetting";
+import SettingsIcon from '@mui/icons-material/Settings';
 
-export const menuItems = [
+
+
+export const menuItems: MenuItemType[] = [
   {
-    text: "داشبورد",
+    title: t("menus.dashboard"),
     icon: <DashboardIcon />,
     path: "/dashboard",
+    component: index,
   },
   {
-    text: "کاربران",
-    icon: <PeopleIcon />,
-    children: [
-      {
-        text: "لیست کاربران",
-        icon: <PersonIcon />,
-        path: "/users/list",
-      },
-      {
-        text: "افزودن کاربر",
-        icon: <AddIcon />,
-        path: "/users/create",
-      },
-    ],
+    title: t("menus.uploadFile"),
+    icon: <PersonIcon />,
+    path: "/makeReport",
+    component: MakeReport,
+  },
+ {
+    title: "",
+    icon: <></>,
+    path: "/login",
+    component: Login,
   },
   {
-    text: "گزارشات",
-    icon: <BarChartIcon />,
-    children: [
-      {
-        text: "گزارش فروش",
-        icon: <BarChartIcon />,
-        path: "/reports/sales",
-      },
-    ],
+    title: t("menus.feeSetting"),
+    icon: <SettingsIcon  />,
+    path: "/FeeSetting",
+    component: FeeSetting,
   },
+  
 ];

@@ -1,22 +1,57 @@
 {
   "labels": {
-    "department": "دپارتمان",
-    "users": "کاربران",
-    "dashboard": "داشبورد",
-    "reports": "گزارشات",
-    "startDate": "تاریخ شروع",    
-    "calcType":"روش محاسبات",
-    "transactionType":"نوع تراکنش",
-    "calcRate":"نرخ محاسبه",
-    "amountCalc":"مبلغ مورد محاسبه"
+    "dashboard": "dashboard",
+    "reports": "reports",
+    "selectedDated": "Date",
+    "calcType": "Calculate Type",
+    "transactionType": "Transaction Type",
+    "calcRate": "Calculate Rate",
+    "amountCalc": "Amount Calculateed",
+    "status": "Status",
+    "reportDate": "Report Date",
+    "user": "User",
+    "error": "Process Error",
+    "userName": "User Name",
+    "password": "Password",
+    "loginTitle": "Enter Mitab",
+    "enter": "Enter",
+    "acquirer":"Acquirer",
+    "shetab":"Shetab",
+    "issuer":"Issuer",
+    "bankDes":"Bank Destination"
   },
   "buttons": {
-    "submit": "ثبت",
-    "cancel": "لغو"
+    "submit": "submit",
+    "cancel": "cancel",
+    "selectedDate": "selectedDate",
+    "process": "process",
+    "processing": "processing..."
   },
-    "errors":{
-      "invalidDate" :"iNVALID DATE !",
-      "empty":"ِDate is Empty!"
-
+  "errors": {
+    "1001": "System Exception",
+    "1007": "ّShetab File Not Found",
+    "3000": "Report Date Not Enter ",
+    "4001": "Shetab File Not Exists"
+  },
+  "alert": {
+    "noData": "No resualts"
+  },
+  "success": {
+    "makeReport": "Report Date Entered Succes. please refere to <1>{{address}}</1>"
+  },
+  "menus": {
+    "dashboard": "Uploaded File Management",
+    "uploadFile": "Upload File",
+    "feeSetting": "Fee Setting"
+      
+  },
+  "validations": {
+    "3002": "Create Date Is Invalid",
+    "3003": "Create Date Is Empty",
+    "3004": "Invalid User And Password"
+  },
+  "messages": {
+    "inValidUsername": "Invalid Username",
+    "inValidPassword": "Invalid Password"
   }
 }

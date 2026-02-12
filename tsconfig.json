@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
+    "types": ["node"],
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOMIterable"],
+    "lib": ["es2020", "dom", "dom.iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
 
@@ -31,7 +32,12 @@
       "@/types/*": ["src/types/*"],
       "@/api/*": ["src/api/*"],
       "@/i18n/*": ["src/i18n/*"],
-      "@/utilities": ["src/utilities/*"]
+      "@/utilities": ["src/utilities/*"],
+      "@/pages/views":["src/pages/views/*"],
+      "@/services/*":["src/services/*"],
+      "@/config/*":["src/config/*"],
+      "@/assets/*":["src/assets/*"],
+      "@/theme/*":["src/theme/*"]
       
 
     },

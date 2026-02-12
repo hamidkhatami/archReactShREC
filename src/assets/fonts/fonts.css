@@ -1,0 +1,44 @@
+/* Shabnam */
+@font-face {
+  font-family: 'Shabnam';
+  src: url('@/assets/fonts/Shabnam.woff') format('woff2');
+  
+}
+
+
+/* IranSans */
+@font-face {
+  font-family: 'IranSans';
+  src: url('@/assets/fonts/IranianSans.woff') format('woff2');
+  
+}
+
+/* Sahel */
+@font-face {
+ font-family: "Sahel";
+    src: url('@/assets/fonts/Sahel.woff2') format('woff2'),
+    url('@/assets/fonts/Sahel.woff') format('woff');
+    font-weight: normal;
+  
+}
+
+/* Sahel-black */
+@font-face {
+ font-family: "Sahel-Black";
+    src: url('@/assets/fonts/Sahel-Black.woff2') format('woff2'),
+    url('@/assets/fonts/Sahel-Black.woff') format('woff');
+    font-weight: normal;
+  
+}
+
+/* Sahel-bold */
+@font-face {
+ font-family: "Sahel-Bold";
+    src: url('@/assets/fonts/Sahel-Bold.woff2') format('woff2'),
+    url('@/assets/fonts/Sahel-Bold.woff') format('woff');
+    font-weight: normal;
+  
+}
+
+
+
